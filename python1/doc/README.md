@@ -78,7 +78,8 @@ python main.py
 - `doc`：说明文档，包括：
   -  `README.md`：说明文档的 `md` 格式文件
   -  `README.pdf`：说明文档的 `pdf` 格式文件
-  -  `main.py`：打开程序时需要运行的文件
+  -  `input.txt`：输入文件（成绩单字符串）
+-  `main.py`：打开程序时需要运行的文件
 
 ## 不足和改进
 

@@ -18,7 +18,7 @@ class Calc(object):
     def countCredit(self):   # 计算所修学分
         self.sumCredit = 0
         for course in self.list:
-            if (course['绩点'] != "F" and course['绩点'] != "I" and course['绩点'] != "W"):   # 刨去 挂科、未完成与退课的课程
+            if course['绩点'][0] != 'F' and course['绩点'][0] != 'I' and course['绩点'][0] != 'W':   # 刨去 挂科、未完成与退课的课程
                 self.sumCredit += int(course['学分'])
         return self.sumCredit
     

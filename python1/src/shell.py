@@ -23,13 +23,14 @@ class Shell(object):
             root = Tk()
             GUI(root, self.calc, "init")   # 创建一个 init 类的成绩单录入窗口，具体见 GUI.py
             root.mainloop()
-            print("\n成绩单已成功保存！请稍等片刻...\n")
             self.calc.makeDictlist()   # 调用 Calc 解析字符串成绩单的函数
+            print("\n成绩单已成功保存！请稍等片刻...\n")
         elif (cmd == "2"):   # 更改成绩单内容
             try:   # 若尚未录入成绩单，则报错
                 root = Tk()
                 GUI(root,self.calc, "edit")   # 创建一个 edit 类的成绩单录入窗口，具体见 GUI.py
                 root.mainloop()
+                self.calc.makeDictlist()
                 print("\n成绩单已成功保存！请稍等片刻...\n")
             except:
                 root.destroy()
@@ -52,6 +53,7 @@ class Shell(object):
                 print("\n高于平均学分绩的课程有：\n")
                 for course in courseList:   # 分别打印每门课程的名称
                     print(course)
+                print("\n")
             except: 
                 print("\n尚未录入成绩或成绩单格式不正确。\n")
         elif (cmd == "?"):   # 显示帮助
