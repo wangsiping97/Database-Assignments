@@ -1,3 +1,7 @@
+<center>
+  经56 王思萍 2015012527
+</center>
+
 # GPA 计算器
 
 一个更高级的GPA计算器。
@@ -84,13 +88,30 @@ python main.py
 ## 不足和改进
 
 1. 不支持多语言界面。
-  - 可能的解决方案：实现界面多语言框架。
+  
+   - 可能的解决方案：实现界面多语言框架。
 2. 命令行界面不支持切换到历史命令等高级功能。且现在 `Shell` 中命令解析部分的实现依然是传统命令式编程的if-else风格。
-  - 可能的解决方案：学习使用命令窗口专用函数，设计新的框架或套用已有框架。
-3. 录入成绩单并保存后会出现一小段时间的无响应状态，并在后续打开窗口时出现以下内容：
+  
+   - 可能的解决方案：学习使用命令窗口专用函数，设计新的框架或套用已有框架。
+3. 在 OS X 系统下，录入成绩单并保存后会出现一小段时间的无响应状态，并在后续打开窗口时出现以下内容。但在 windows 系统下就不会发生该情况。
 
    ```
    IMK Stall detected, *please Report* your user scenario in <rdar://problem/16792073> - (imkxpc_bundleIdentifierWithReply:) block performed very slowly (XX secs)
    ```
 
    - 可能的解决方案：询问老师、同学或助教。
+
+4. 在 OS X 中窗口显示正常，如图一。但在 windows 系统下窗口的细节会出现问题，如图二。
+   - 可能的解决方案：学习 `tkinter` 模块的高级功能，优化代码。
+
+<center>
+  图一
+</center>
+
+<img src="/Users/wangsiping/Desktop/2.png" width = "400" />
+
+<center>
+  图二
+</center>
+
+<img src="/Users/wangsiping/Desktop/3.png" width = "400" />

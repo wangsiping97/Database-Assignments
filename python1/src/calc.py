@@ -1,6 +1,7 @@
 class Calc(object):
     def getGrade(self, str):   # 存入成绩单字符串
         self.initGrade = str
+        return 1
     
     def makeDictlist(self):   # 将成绩单字符串制作成字典列表
         self.list = list()
@@ -14,6 +15,7 @@ class Calc(object):
             tempDict['学分'] = courseList[1]
             tempDict['绩点'] = courseList[2]
             self.list.append(tempDict)   # 将字典加入字典列表中
+        return 1
     
     def countCredit(self):   # 计算所修学分
         self.sumCredit = 0

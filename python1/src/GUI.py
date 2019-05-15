@@ -39,7 +39,7 @@ class GUI():
         else: 
             self.gradeList.insert(END, self.calc.initGrade)
         
-        self.frmLB = Frame(self.master, width=400, height=30)   # 制作两一个 frame，用来防止确认按钮
+        self.frmLB = Frame(self.master, width=400, height=30)   # 制作两一个 frame，用来放置确认按钮
         self.frmLB.place(x=0, y=270, width=400)
         self.frmLB.grid_propagate(0)
 
