@@ -19,6 +19,10 @@
 
 - python 3.X
 
+- random
+
+- math
+
 - terminal（OS X 或 Linux）/ cmd （windows）
 
 ### 运行
