@@ -2,12 +2,17 @@ from LearnTHU import loggedSession
 import pandas as pd 
 import json
 
-sess = loggedSession('','') # 登录网络学堂账号
-res = sess.get('http://learn.tsinghua.edu.cn/f/wlxt/common/courseSearch')
-data = {'aoData': '[]'}
-res = sess.post('http://learn.tsinghua.edu.cn/b/kc/v_wlkc_search/pageList',data=data)
+try: 
+    str_info = open('log.json', 'r').readline(-1)
+except:
+    sess = loggedSession('','') # 登录网络学堂账号
+    res = sess.get('http://learn.tsinghua.edu.cn/f/wlxt/common/courseSearch')
+    data = {'aoData': '[]'}
+    res = sess.post('http://learn.tsinghua.edu.cn/b/kc/v_wlkc_search/pageList',data=data)
+    open('log.json','w').write(res.text)
+    str_info = res.text
 
-info_dict = json.loads(res.text) # 生成字典格式的信息
+info_dict = json.loads(str_info) # 生成字典格式的信息
 course_info = info_dict['object']['aaData'] # 全部课程的字典列表
 course_dict = {'kch': [], 'kxh': [], 'kcm': [], 'jsmc':[], 'jsh':[], 'kkdw':[], 'xss':[]} # 按题目要求初始化空字典
 
